@@ -16,6 +16,13 @@ populate a secondary routing table. mark the packets in nftables and use ip rule
 to send them where they belong. Doable but since there is no demand for this
 I won't bother plus im busy with nixos on IBM Z :| ...
 
+#### good practices
+
+- you should prolly use whonix either way or look into "stream isolation"
+- you should not reuse your ssh keys places
+- you may want to look into if its possible for dns leaks to take place
+- but since the port is forced i think thats unlikely unless resolving happens over a unix socket or sth not covered by nft
+
 
 ```nix
 {config,pkgs,...}: let 
