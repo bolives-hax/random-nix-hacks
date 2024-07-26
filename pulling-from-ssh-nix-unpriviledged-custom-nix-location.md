@@ -5,7 +5,7 @@ use sth like this
 # V doesn't seem to work
 # nix build .# --trusted-substituters  "ssh://username@some.place?remote-program=/home/username/nix-store-custom
 # use the following instead
-nix build .#    --substituters "ssh://username@some.placeremote-program=/home/username/nix-store-custom" --no-require-sigs
+nix build .#    --substituters "ssh://username@some.place?remote-program=/home/username/nix-store-custom" --no-require-sigs
 # ^ depending if ur user is trusted or not you may want to either add ur user to trusted or run it as root or a trusted user
 # as this won't run the actual build as root or whatever since it goes trough the nix daemon either way, you can change it
 # as soon as you fetched your deps assuming this is just to bypass lengthy rebuilds like I deal with atm porting nixos to s390x
